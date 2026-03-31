@@ -97,6 +97,9 @@ fn main() {
         // Updates the system
         "update" => run(true, vec!["pacman", "-Syu"]),
 
+        // Force Upgrades the system (not recommended only for mirror issues and some other shit)
+        "forceupdate" => run(true, vec!["pacman", "-Syyu"]),
+
         // upgrades a pkg
         "upgrade" => {
         let mut a = vec!["pacman", "-S"];
@@ -226,7 +229,7 @@ fn main() {
             "#.cyan().bold());
             println!("{}", "A Tool to help beginners use the Terminal for Arch-based distros".white());
             println!("{}", format!("Version: {}", VERSION).white());
-            println!("{}", "© 2025 fusiontech21 — AGPL-3.0".white());
+            println!("{}", "© 2026 fusiontech21 — AGPL-3.0".white());
         }
 
         // Help command                                     // THIS IS LOOKING GOOD REMASTERED THE FORMAT - Fusiontech
@@ -268,7 +271,7 @@ fn main() {
         println!("{} {}", "fusi self-update".green().bold(),          "→ Update fusi to the latest version");
         println!("{} {}", "fusi details".green().bold(),              "→ Show info about fusi");
         println!("{}", "─────────────────────────────────────────".cyan());
-        println!("{}", "© 2025 fusiontech21 — AGPL-3.0".white());
+        println!("{}", "© 2026 fusiontech21 — AGPL-3.0".white());
 }
 
         // anything else
