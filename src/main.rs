@@ -1,7 +1,7 @@
 use colored::Colorize;
 use std::process::Command;
 
-const VERSION: &str = "0.1.0";
+const VERSION: &str = "0.2.0";
 
 // TODO  add autoremove command : LINE 132
 // TODO add a help command that lists commands and names their Functions
@@ -38,11 +38,27 @@ fn checkupdate() {
             if let Some(tg) = txt.split("\"tag_name\":\"").nth(1) {
                 let latst = tg.split('"').next().unwrap_or("");
                 if !latst.is_empty() && latst != VERSION {
+                    println!(); // idk how many times i apologized BUT AGAIN SORRY FOR THE FORMATTING!! 
+                    // WHOEVER READS THIS PLEASE FIX THE FORMATTING!!!!!!
                     println!(
-                        "{} {}",
-                        format!("⚠ New Version Available: {}", latst).yellow(),
-                        format!("→ RUN 'fusi self-update' to update").red()
+                        "{}",
+                        "╔══════════════════════════════════════════╗".yellow()
                     );
+                    println!(
+                        "{}",
+                        format!("║  ⚠ New Version Available: {}  ║", latst)
+                            .yellow()
+                            .bold()
+                    );
+                    println!(
+                        "{}",
+                        "║  RUN 'fusi self-update' to update        ║".red().bold()
+                    );
+                    println!(
+                        "{}",
+                        "╚══════════════════════════════════════════╝".yellow()
+                    );
+                    println!();
                 }
             }
         }
@@ -51,7 +67,7 @@ fn checkupdate() {
 
 fn main() {
     colored::control::set_override(true);
-    checkupdate();
+
     let args: Vec<String> = std::env::args().skip(1).collect();
 
     if args.is_empty() {
@@ -283,6 +299,8 @@ fn main() {
             );
         }
     }
+
+    checkupdate();
 
     std::process::exit(0);
 }
