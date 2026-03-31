@@ -10,6 +10,12 @@ Fusi is a terminal tool for Arch-based distros that replaces complex pacman comm
 
 ## Installation
 
+### IF YOU DONT HAVE GIT MAKE SURE TO INSTALL IT HERES THE COMMAND
+```bash
+sudo pacman -S git
+sudo pacman -Syu
+```
+
 ### One line install
 ```bash
 curl -s https://raw.githubusercontent.com/fusiontech21/Fus-UtilityTool/main/setup/install.sh | bash
