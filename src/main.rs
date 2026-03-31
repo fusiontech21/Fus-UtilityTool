@@ -90,7 +90,7 @@ fn main() {
 
         // FUN
         "secret" => {
-            let txt = "You are secretly a Femboys";
+            let txt = "You are secretly a Femboy";
             secrething(&txt);
         }
 
