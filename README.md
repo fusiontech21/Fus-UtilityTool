@@ -18,7 +18,7 @@ sudo pacman -Syu
 
 ### One line install
 ```bash
-curl -s https://raw.githubusercontent.com/fusiontech21/Fusi/main/setup/install.sh | bash
+curl -s https://raw.githubusercontent.com/fusiontech21/Fusi/main/install.sh | bash
 ```
 
 ### Manual install
