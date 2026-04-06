@@ -43,7 +43,6 @@ sudo cp target/release/cora /usr/local/bin/
 
 ![showcase 1](imgs/Showcase1.png)
 ![showcase 2](imgs/Showcase2.png)
-![showcase 3](imgs/Showcase3.png)
 
 ---
 
